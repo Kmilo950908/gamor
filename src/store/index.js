@@ -1,7 +1,7 @@
 import { createStore } from 'vuex'
-import Usuarios from "../../usuarios.json";
-import Juegos from "../../juegos.json";
-import Categorias from "../../categorias.json";
+import Usuarios from "../utils/usuarios.json";
+import Juegos from "../utils/juegos.json";
+import Categorias from "../utils/categorias.json";
 
 export default createStore({
   state: {
