@@ -1,0 +1,31 @@
+[
+    {
+        "categoria": "Accion",
+        "juegos": [
+            "Mafia",
+            "Hitman"
+        ]
+    },
+    {
+        "categoria": "Aventura",
+        "juegos": [
+            "Red Dead Redemption",
+            "Assassins Creed"
+        ]
+    },
+    {
+        "categoria": "Shooter",
+        "juegos": [
+            "CoD",
+            "Battelfield"
+        ]
+    },
+    {
+        "categoria": "Deportes",
+        "juegos": [
+            "Fifa",
+            "NBA",
+            "MLB"
+        ]
+    }
+]

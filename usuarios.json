@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "img": "fotos/sopa_china.jpeg",
+        "usuario": "usuario 1",
+        "password": "1"
+    },
+    {
+        "id": 2,
+        "img": "fotos/pizza_margarita.jpeg",
+        "usuario": "usuario 2",
+        "password": "2"
+    },
+    {
+        "id": 3,
+        "img": "fotos/coctel_de_camarones.jpg",
+        "usuario": "usuario 3",
+        "password": "3"
+    },
+    {
+        "id": 4,
+        "img": "fotos/pizza_hawaiana.jpeg",
+        "usuario": "usuario 4",
+        "password": "4"
+    },
+    {
+        "id": 5,
+        "img": "fotos/pizza_hawaiana.jpeg",
+        "usuario": "usuario 5",
+        "password": "5"
+    },
+    {
+        "id": 6,
+        "img": "fotos/pizza_hawaiana.jpeg",
+        "usuario": "usuario 6",
+        "password": "6"
+    },
+    {
+        "id": 7,
+        "img": "fotos/pizza_hawaiana.jpeg",
+        "usuario": "usuario 7",
+        "password": "7"
+    },
+    {
+        "id": 8,
+        "img": "fotos/pizza_hawaiana.jpeg",
+        "usuario": "usuario 8",
+        "password": "8"
+    },
+    {
+        "id": 9,
+        "img": "fotos/pizza_hawaiana.jpeg",
+        "usuario": "usuario 9",
+        "password": "9"
+    },
+    {
+        "id": 10,
+        "img": "fotos/pizza_hawaiana.jpeg",
+        "usuario": "usuario 10",
+        "password": "10"
+    }
+]
