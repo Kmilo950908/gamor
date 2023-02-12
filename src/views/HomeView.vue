@@ -332,6 +332,7 @@ select {
   --card-color: gray;
   --text-color: white;
   --back-image: url("../assets/naruto.png");
+  --info-color: url("../assets/info-dark.png");
 }
 
 [data-theme="lightMode"] {
@@ -343,5 +344,6 @@ select {
   --card-color: white;
   --text-color: black;
   --back-image: url("../assets/sophitia-removebg-preview.png");
+  --info-color: url("../assets/info.png");
 }
 </style>

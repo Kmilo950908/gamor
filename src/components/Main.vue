@@ -93,7 +93,7 @@
             </table>
           </div>
           <br />
-          <h6 v-if="noInsert">
+          <h6 class="info" v-if="noInsert">
             Debe seleccionar un juego para añadir usuarios
           </h6>
         </div>
@@ -199,5 +199,23 @@ export default {
   font-size: 20px;
   cursor: pointer;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.info,
+.correcto,
+.ojo,
+.error,
+.validation {
+  border: 1px solid var(--border-color);
+  border-radius: 150px;
+  padding: 2px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-color: transparent;
+  background-position: left;
+  background-size: 20px 20px;
+  height: 20px;
+}
+.info {
+  color: var(--text-color);
 }
 </style>
