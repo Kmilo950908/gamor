@@ -320,6 +320,7 @@ select {
   --background-color: rgb(46, 45, 45);
   --card-color: gray;
   --text-color: white;
+  --back-image: url("../assets/soul-dark.jpg");
 }
 
 [data-theme="lightMode"] {
@@ -330,5 +331,6 @@ select {
   --background-color: white;
   --card-color: white;
   --text-color: black;
+  --back-image: url("../assets/soul-light.jpg");
 }
 </style>

@@ -13,7 +13,7 @@
         <button class="btn-3" @click="modal()">Entrar</button>
         <button class="btn-4">Registarse</button>
       </div>
-      <div class="card">
+      <div class="card background-image">
         <div class="navbar-1">
           <div class="container flex">
             <h3>Sala de Juego: {{ game }}</h3>
@@ -157,6 +157,10 @@ export default {
 };
 </script>
 <style>
+.background-image {
+  background-image: var(--back-image);
+  background-color: gray;
+}
 .h {
   font-size: 30px;
   color: var(--h-color);
