@@ -3,7 +3,10 @@
     <div class="main grid-1">
       <div class="card">
         <div class="circle">
-          <img src="fotos/sopa_china.jpeg" alt="" />
+          <img
+            :src="userLogged.user !== '' ? userLogged.img : userEmpty.img"
+            :title="userLogged.user !== '' ? userLogged.img : userEmpty.user"
+          />
         </div>
         <h1>start</h1>
         <h1 class="h">streaming</h1>
@@ -67,7 +70,7 @@
               </select>
             </li>
           </ul>
-          <div class="scroll-container">
+          <div class="scroll-container-1">
             <table class="container-1">
               <tbody v-for="user in usuarios" :key="user.id">
                 <tr>
@@ -83,20 +86,16 @@
                     </div>
                   </td>
                   <td>
-                    <button
-                      class="btn"
-                      @click="addCarrito(user)"
-                      :disabled="!game"
-                    >
-                      <div class="circle-1">
-                        <img src="../assets/mas.png" />
-                      </div>
-                    </button>
+                    <button class="btn" @click="addCarrito(user)">+</button>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <br />
+          <h6 v-if="noInsert">
+            Debe seleccionar un juego para añadir usuarios
+          </h6>
         </div>
       </div>
     </div>
@@ -113,14 +112,20 @@ export default {
   components: {},
   setup(props, { emit }) {
     const store = useStore();
+    const userEmpty = ref({
+      user: "no hay usuario logueado",
+      img: "fotos/user.jpg",
+    });
     const carrito = computed(() => store.state.carrito);
     const usuarios = computed(() => store.state.usuarios);
+    const userLogged = computed(() => store.state.userLogged);
     const juegos = computed(() => store.state.juegos);
     const categorias = computed(() => store.state.categorias);
     const juegosSelection = ref([]);
     const incorrect = computed(() => store.state.isIncorrect);
     const game = ref("");
     const catGame = ref("");
+    const noInsert = ref(false);
 
     const updateJuegos = () => {
       game.value = "";
@@ -131,7 +136,10 @@ export default {
       }
     };
     const addCarrito = (user) => {
-      store.dispatch("addCarrito", user);
+      if (game.value) {
+        noInsert.value = false;
+        store.dispatch("addCarrito", user);
+      } else noInsert.value = true;
     };
     const delallcarrito = () => {
       store.dispatch("delallCarrito");
@@ -152,6 +160,9 @@ export default {
       addCarrito,
       delallcarrito,
       modal,
+      userLogged,
+      userEmpty,
+      noInsert,
     };
   },
 };
@@ -159,7 +170,9 @@ export default {
 <style>
 .background-image {
   background-image: var(--back-image);
-  background-color: gray;
+  background-repeat: no-repeat;
+  background-size: 200px 250px;
+  background-position: bottom;
 }
 .h {
   font-size: 30px;

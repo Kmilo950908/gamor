@@ -69,11 +69,15 @@ input {
   margin: 0 20px;
   line-height: 1.5;
   text-align: center;
+  border-radius: 150px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .aceptar {
   padding: 8px 8px;
-  background: greenyellow;
+  background: var(--border-color);
   border: none;
   margin-left: 10px;
   font-size: 10px;
@@ -82,7 +86,7 @@ input {
 }
 .cancelar {
   padding: 8px 8px;
-  background: red;
+  background: var(--border-color);
   border: none;
   margin-left: 10px;
   font-size: 10px;

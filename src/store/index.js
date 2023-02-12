@@ -10,6 +10,7 @@ export default createStore({
     usuarios: Usuarios,
     juegos: Juegos,
     categorias: Categorias,
+    userLogged: { user: "", pass: "", img: "" },
     carrito: []
   },
   getters: {
@@ -31,10 +32,11 @@ export default createStore({
     FALSE_ISOPEN(state, val) {
       return state.isOpen = val
     },
-    async LOGIN(state, obj) {
+    LOGIN(state, obj) {
       for (let index = 0; index < state.usuarios.length; index++) {
-        if (await state.usuarios[index].usuario === obj.u && state.usuarios[index].password === obj.p) {
+        if (state.usuarios[index].usuario === obj.u && state.usuarios[index].password === obj.p) {
           state.isIncorrect = false
+          state.userLogged = { user: obj.u, pass: obj.p, img: state.usuarios[index].img }
           return
         }
         else state.isIncorrect = true

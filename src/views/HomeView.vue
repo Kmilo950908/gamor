@@ -8,16 +8,15 @@
             <img src="../assets/night.png" /></div
         ></span>
         <span v-else>
-          <div class="circle-2"><img src="../assets/day.png" /></div
+          <div class="circle-2"><img src="../assets/sun.png" /></div
         ></span>
       </button>
       <nav>
-        <ul>
-          <li class="nav">
+        <!--   <li class="nav">
             <a class="outline" @click="openModal()">Entrar</a>
-          </li>
-          <li class="nav"><a class="outline">Regristarse</a></li>
-        </ul>
+          </li> -->
+        <router-link to="" @click="openModal()">Entrar</router-link>
+        <router-link to="/registro">Registro</router-link>
       </nav>
     </div>
   </div>
@@ -170,10 +169,17 @@ p {
   overflow-y: auto;
   scroll-behavior: smooth;
 }
+.scroll-container-1 {
+  display: block;
+  width: 400px;
+  height: 240px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
 /* Aplica el color de fondo, altura y "padding"*/
 
 .navbar-1 {
-  background-color: var(--card-color);
+  background-color: transparent;
   height: 50px;
   padding: 0 10px;
 }
@@ -231,15 +237,20 @@ select {
   font-weight: 300;
   margin: 0 20px;
   line-height: 1.5;
-  text-align: left;
+  overflow: hidden;
   width: 90%;
+  border-radius: 150px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 .btn {
   padding: 2px 2px;
   border: none;
+  color: #070707;
   background: transparent;
   margin-left: 10px;
-  font-size: 10px;
+  font-size: 30px;
   cursor: pointer;
 }
 .btn-1 {
@@ -320,7 +331,7 @@ select {
   --background-color: rgb(46, 45, 45);
   --card-color: gray;
   --text-color: white;
-  --back-image: url("../assets/soul-dark.jpg");
+  --back-image: url("../assets/naruto.png");
 }
 
 [data-theme="lightMode"] {
@@ -331,6 +342,6 @@ select {
   --background-color: white;
   --card-color: white;
   --text-color: black;
-  --back-image: url("../assets/soul-light.jpg");
+  --back-image: url("../assets/sophitia-removebg-preview.png");
 }
 </style>
